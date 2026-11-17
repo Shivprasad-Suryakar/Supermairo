@@ -155,9 +155,7 @@ In Killercoda:
 ```text
 https://<environment-id>-32127.papa.r.killercoda.com
 ```
- 
----
- 
+
 ## Verify Service
  
 Test locally:
@@ -190,9 +188,7 @@ Verify:
 ```bash
 kubectl get pods
 ```
- 
----
- 
+  
 ## Rolling Update
  
 Update image:
@@ -316,20 +312,3 @@ By completing this project you will learn:
 - Kubernetes Troubleshooting
 - Rolling Updates & Rollbacks
  
----
- 
-## Author
- 
-**Shivprasad Vishwanath Suryakar**
- 
-B.Sc. Computer Science
-MCA (2025–2027)
-RHCSA | CLA | CCA | OpenShift Enthusiast | Kubernetes Learner
- 
----
- 
-## License
- 
-This project is for educational and learning purposes.
-
-This README is suitable for a GitHub project and will look professional on your portfolio. 🚀
