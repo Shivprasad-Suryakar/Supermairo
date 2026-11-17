@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mario-deployment
+  labels:
+    app: mario
+    version: v1
+spec:
+  replicas: 3
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+
+  selector:
+    matchLabels:
+      app: mario
+      version: v1
+
+  template:
+    metadata:
+      labels:
+        app: mario
+        version: v1
+
+    spec:
+      containers:
+      - name: mario-container
+        image: sevenajay/mario:latest
+        imagePullPolicy: Always
+
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 10
+
+      terminationGracePeriodSeconds: 30
