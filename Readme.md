@@ -36,7 +36,7 @@ kubectl get svc
 Example:
 
 ```text
-mario-deployment   NodePort   80:32127/TCP
+mario-service   NodePort    10.96.81.163   <none>        80:30080/TCP   14m
 ```
 
 Access:
