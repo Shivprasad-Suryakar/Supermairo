@@ -29,7 +29,7 @@ mario-deployment-xxxxx              1/1     Running
 Get the NodePort:
 
 ```bash
-kubectl get svc
+kubectl get svc -o wide 
 ```
 
 Example:
