@@ -13,7 +13,6 @@ kubectl apply -f service.yaml
 
 ```bash
 kubectl get pods
-kubectl get svc
 ```
 
 Expected:
